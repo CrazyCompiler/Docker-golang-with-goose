@@ -1,11 +1,10 @@
 FROM golang:1.15.10-alpine3.13 AS builder
 RUN mkdir /app
-ADD . /app
 WORKDIR /app
 
 #instal gcc for goose
 RUN set -ex && \
-    apk add --no-cache gcc musl-dev
+    apk add --no-cache git gcc musl-dev
 
 RUN set -ex && \
     rm -f /usr/libexec/gcc/x86_64-alpine-linux-musl/6.4.0/cc1obj && \
