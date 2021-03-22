@@ -1,4 +1,4 @@
-FROM golang:1.15.10-alpine3.13 AS builder
+FROM golang:1.15.10-alpine3.13
 
 #instal gcc for goose
 RUN set -ex && \
